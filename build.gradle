@@ -1,0 +1,22 @@
+buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://files.minecraftforge.net/maven' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.asbyth:MCGradle:09f84c1c42906c19e0f7902512a9215481279b4e'
+    }
+}
+
+group 'dev.asbyth'
+
+apply plugin: 'java'
+apply plugin: 'club.ampthedev.mcgradle'
+
+sourceCompatibility = targetCompatibility = '1.8'
+compileJava.options.encoding = 'UTF-8'
+
+mcgradle {
+    version '1.8.9'
+}
